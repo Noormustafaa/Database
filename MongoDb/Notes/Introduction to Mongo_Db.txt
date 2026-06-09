@@ -1,0 +1,25 @@
+Introduction to Mongo_Db
+Mongo_Db is a Database Server Where We store alot of DataBases!
+The Word Mongo means Huge !It can Store huge amount of data Efficiently.
+Difference Between The MySQL and MongoDb
+
+1:Mysql! we used the Schemaas(means structure like table)       1:Mongodb:Schemaless and Highly Scalable 
+
+	
+2:Mysql!We have Database and we use table structure there       2: in the same way mongodb has Database 
+							           But in mongodb instead of Tables we used collection:
+  and in that table we have multiple rows.			   example: one Collection like Food : 2nd collection is like for Student
+							           and 3rd collection is for Students . and now we take one collection and inside it
+								   we have so many documents(rows).
+
+
+--------------!
+
+Now Lets Discuss What is Documents ! Note ! Documents Basically Saved in the JSON FORMAT !
+example we have a collection named Employe!then its format will be like JSON Format !JSON format like 
+in java Script objects , like in python  dictionary in the same way here document will be in the form of JSON .
+
+Note! 1: in mongodb  less relations ! in MySQL entites (database tables ) are stored in different tables then if we need any data then we use joint Queries .
+but in mongodb all the data stored in one collection in this reason Query Will become easy! and become fast.
+
+      2: Data Is Stored Together !
