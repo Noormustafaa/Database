@@ -1,0 +1,19 @@
+Some More Commands:
+
+5->db.Students.updateOne({name:'Noor'},{$set:{idCard:{adharCard:true,RashanCard:false } } })
+6->db.Students.findOne({name:'Noor'}) for finding specific Document!
+	Note: 16mb till we can make each document and we can create nased document 100 till nasting
+
+	1. Document Size Limit: 16 MB (Correct)
+You are 100% correct. The maximum size for a single BSON document in MongoDB is 16 Megabytes.
+2:The actual official limit set by MongoDB is 100 levels of nesting
+
+7->db.Students.updateMany({},{$set:{Hobbies:["Playing","Dancing","Loving"]}})
+   This is used for the update all records at once !
+8->db.Students.find({Hobbies:"Loving"}) //For Searching whose hobbies is Loving !
+
+9->db.Students.find({Hobbies:"Loving"}).count()
+	it will show how many documents are exists whose hobbies are loving !
+
+10->db.Students.find({'idCard.adharCard':true})
+	 this is how we can Search the Nasted Document!
