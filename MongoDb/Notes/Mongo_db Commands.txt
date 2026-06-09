@@ -1,0 +1,11 @@
+Mongo_db Commands
+
+1: show dbs 
+ for checking that how many databases are exists
+2: use latest_db
+ it will create new database and automatic it will use that database !
+3: db.Students.insertOne({name:"Noor", age:24})
+   db.Students when we write it will create one collection and when we write the insertOne({})
+   then it will create the document
+4:db.Students.Find()
+ it wil show all documents which are exist in the Students Collection
