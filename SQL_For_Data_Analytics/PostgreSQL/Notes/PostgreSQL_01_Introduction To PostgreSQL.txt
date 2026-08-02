@@ -1,0 +1,57 @@
+PostgreSQL_01
+It is also called Postgres, is a free ,Open-source, and Powerful relational database.
+
+it stores data in tables with rows and columns , just like excel sheets.
+
+
+1: it's Very Strict And Reliable .
+   It Follows rules Carefully so your data never gets corrupted.
+
+    that's why banks, Uber , Instagram , and Big Companies use it .
+
+2: It Uses SQL Language 
+   To Talk to it , We use SQL commands .
+   example: select * From Customers Where city = "karachi"
+
+	Note : it is Specially Popular For Data Analytics , Reports , and 
+               Complex Apps Because it can handle Advanced Queries  and                     	       lot's  Of Data types.
+
+What Is DataBase .
+
+A Database is simply a collection Of organized Data That can be Easily 
+accessed , managed , and updated .
+
+In Technical Terms: we can say 
+1:it stores Data Electronically 
+2:The Data Is organized in tables (Like excel sheets with rows and Columns)
+3:You can Query the data using Language (Usually SQL )to read, insert , 
+  Update and delete tha data.
+4:The Database  System ensures consistency,  reliability , and Security for               the Data
+
+
+What Is RDBMS ? 
+RDBMS Stands For Relational Database Management System.
+
+Relational: Data Is Organized into Tables (Which are related To each 	  	    Other)
+Database :  A Collection Of Structured Data .
+
+Management System :Software That allows You To Create , read ,update and delete data (using SQL).
+
+So RDBMS is a Software that helps you to store data in tables , relate them to each other , and Perform Operations on them Using SQL .
+
+Examples Of RDBMS : 
+SQL--> PostgreSQL 
+       MySQL 
+       SQL Lite 
+       Oracle Database 
+       SQL  Server 
+
+
+Why PostgreSQL ? 
+1: Open Source 
+2: Most Feature Rich and PowerFul 
+3: Supports Complex Queries, joins, CTEs , Windows Functions 
+4: ACID Compliant
+5: Highly extensible (You can add your own data types , Operators,etc)
+6: Support for NOSQL Features Also (JSONB, hstore)
+7: Used For enterprise-grade applications 
