@@ -1,0 +1,31 @@
+PostgreSQL in Command Line and in pgadmin 
+ Step 1: click on window tab and Search PSQL Shell .
+ Step2:  you will see Server Local host just click 3 times Enter 
+
+	you will see 
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+
+psql (18.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=#
+
+Step 3: And then Write \l
+ then  You will be able to see available list of Databases 
+
+--: Let's Create A New Database on pgadmin 
+
+Step1: RightClick on Database and then 
+       and then popup window will open and then write Database name and 
+       then click on Save Icon . 
+	Then you will see that the new Database has been Created. 
+Step2: when you again Write in SQL shell \l then you will see that database
+       which we created now is available that means the SQL is Connected 
+	with pgadmin  
