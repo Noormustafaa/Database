@@ -1,0 +1,32 @@
+Insert Data_05
+
+INSERT INTO students (name, age, grade)
+values ('Akarsh', 23, 'A'),
+       ('Anjali', 22, 'B');
+
+For See that data :
+
+Select * from students;
+
+Or 
+
+Select name From students; 
+
+or 
+
+Select name from students where age = 23; 
+
+--Update Command:
+
+UPDATE students
+SET age = 23
+WHERE name = 'Akarsh';
+
+Note: if You want to execute particular Query in pgadmin
+ 	then just select that Query and then click on Execute . 
+	You don't need to Write again and again 	
+
+--> Delete 
+
+	DELETE FROM students
+WHERE name = 'Anjali';
