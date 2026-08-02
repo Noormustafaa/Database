@@ -1,0 +1,16 @@
+Important in pgadmin_03
+
+1:Database: is Like a Big Container  that stores all your data.
+  inside PostgreSQL Server, you can Create Multiple Databases.
+  Each Database is isolated - data in one database is not mixed with another 
+
+2:SCHEMA
+Inside a database, you can organize objects using schemas.
+
+Think of a schema as a folder — it helps organize your tables, views, functions, etc.
+
+By default, every PostgreSQL database has a schema called public.
+
+-->And Inside That schema we can create Multiple Table 
+
+3:A table is the main place where data is stored.Think of a table like an Excel sheet — rows and columns.Each table has:columns ->define the type of data (name, age, salary)rows -> each record (one person, one product, one order)
