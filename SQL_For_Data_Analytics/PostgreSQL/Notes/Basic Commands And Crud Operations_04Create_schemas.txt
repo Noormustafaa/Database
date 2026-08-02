@@ -1,0 +1,52 @@
+Basic Commands And Crud Operations 
+
+-Note: Crud Operations are Create ,read , update , delete 
+
+Step1: Create a Database 
+       So write in Shell 
+
+	Create Database  new_db;
+
+it will give you message CREATE DATABASE 
+
+Note : we can also Write Queries in pgadmin as well 
+
+Step1: open pg admin 
+ 	and in top you will see Query Tool 
+	
+	OR Write 
+	
+	alt shift+Q
+
+Step2: Now Write Same Query There : 
+       Create Database new_db_2;
+	
+	hit enter or click Execute Script 
+
+Step3: Refresh Just Rightcick on Databases
+
+step4: \c new_db_2 
+        when you write this command then you will be able to change your
+        desired database . 
+
+	Simple : means Switch from one database to another  
+
+
+Step5: create a table 
+
+	Create table Students (
+Student_id INT,
+name char(50),
+age INT,
+grade char(1)
+);
+
+When you run you will be able to see 
+
+CREATE TABLE
+
+Query returned successfully in 181 msec.
+
+Step6: go to that database and in schemas and in Tables you will se this 
+	That we created now and you will be able to see their columns as 
+	well that we have created 
