@@ -1,0 +1,47 @@
+--Constraints_07
+
+| Constraint | Description | Example |
+| --- | --- | --- |
+| PRIMARY KEY | Uniquely identifies each row | id SERIAL PRIMARY KEY |
+| NOT NULL | Column must have a value | name TEXT NOT NULL |
+| UNIQUE | No duplicate values allowed | email TEXT UNIQUE |
+| DEFAULT | Provides default value if none | created_at TIMESTAMP DEFAULT now() |
+| CHECK | Validates values | age INT CHECK (age > 18) |
+| FOREIGN KEY | Links one table to another | user_id INT REFERENCES users(id) |
+
+
+--Primary key -
+uniquely identify each row it should be always not null, and always not
+null . primary key mostly is our id 
+
+--Not Null -- columns must have a value 
+
+name varchar(100) not null 
+
+note: we write constraints always after the Data types 
+
+--unique-- means like every person should have a unique email
+
+--Default-- Provides default value if none 
+  used in mostly ceated_at TIMESTAMP DEFAULT now()
+
+--check-- Means validate something 
+
+--Foreign key : we will learn latter .
+
+
+```sql
+create table random (
+ID serial Primary key,
+name varchar(100) not null,
+email text unique,
+created_at date default now(),
+age int check (age >= 18)
+
+);
+
+insert into random (name,age)
+values ('Akarsh',23);
+
+select * from random;
+
