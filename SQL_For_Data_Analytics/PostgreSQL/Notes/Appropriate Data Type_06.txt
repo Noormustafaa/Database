@@ -1,0 +1,86 @@
+Appropriate Data Types
+
+
+If we talk about SQL we have multiple datatypes these include.
+
+1. Numeric Data Types
+2. Character/String Data Types
+3. Boolean Type
+4)Date and Time Types
+
+
+
+Numeric Data Types :
+
+SMALLINT    2bytes integer               age SMALLINT
+INTEGER/INT 4bytes integer               Quantity INT
+BIGIN       8bytes                       views BIGIN
+SERIAL      Auto-increment integer       id SERIAL primary key 
+
+
+create table numbers (
+Id serial,
+age smallint,
+price numeric(4,2),
+rating Real
+);
+
+
+
+insert into numbers (age, price , rating)
+values (23,23.67,12.567);
+
+
+Character/String Data Types
+
+| Data Type | Description | Example |
+| --- | --- | --- |
+| CHAR(n) | Fixed-length string (pads with space) | code CHAR(5) |
+| VARCHAR(n) | Variable-length string (limit n chars) | email VARCHAR(100) |
+| TEXT | Unlimited-length string | bio TEXT |
+
+
+
+
+create table strings (
+code char(5),
+email varchar(100),
+bio text
+);
+
+
+insert into strings
+values ('23vb4','akarshvyas@gmail.com','hello I am a developer and I am good with Ai');
+
+
+*Boolean Type*
+
+| Data Type | Description | Example |
+| --- | --- | --- |
+
+| BOOLEAN | TRUE, FALSE, NULL | `is_active BOOLEAN` |
+
+
+
+
+create table strings (
+code char(5),
+email varchar(100),
+bio text,
+s_active Boolean
+);
+
+
+
+
+Date and Time Types
+
+| Data Type | Description | Example |
+| --- | --- | --- |
+| DATE | Only date(2025-07-05) | dob DATE |
+| TIME | Only time(14:30:00) | login_time TIME |
+| TIMESTAMP | Date + time | created_at TIMESTAMP |
+| TIMESTAMPTZ | With timezone | event_at TIMESTAMPTZ |
+| INTERVAL | Time difference | duration INTERVAL |
+
+
