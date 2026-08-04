@@ -1,0 +1,23 @@
+clause_01 Group by 
+
+--1.select category from products; if we will write this then we will see all category .
+
+category
+-------------
+Electronics
+Clothing
+Electronics
+Clothing
+Electronics
+
+--2. select category from products Group by category; int this case it will
+just show in sequence each category in unique manner . no item will be repeat. 
+
+category
+-------------
+Electronics
+Clothing
+
+
+
+ 
