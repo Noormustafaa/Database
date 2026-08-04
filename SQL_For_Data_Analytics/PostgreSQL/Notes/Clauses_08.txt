@@ -1,0 +1,38 @@
+Clauses:
+
+Clauses are mainly used for querying the data and are kind of building blocks even you all are using them from the start.
+
+H
+
+*SELECT:** Choose which columns to display
+*FROM:** Specify the table
+*WHERE:** Filter rows based on a condition
+*GROUP BY:** Group rows for aggregation
+*HAVING:** Filter aggregated groups (used after GROUP BY)
+*ORDER BY:** Sort the result in ascending or descending order
+*LIMIT:** Limit the number of rows returned
+*AS:** Rename columns or tables temporarily (aliasing)
+*DISTINCT:** Return only unique/distinct values
+
+
+
+The --SELECT-- clause is used to choose which columns to display, while **FROM** specifies the table being queried. To filter rows based on a condition, you use **WHERE**, whereas **GROUP BY** groups rows for aggregation. **HAVING** is used to filter these aggregated groups after a `GROUP BY` clause. For sorting, **ORDER BY** arranges the results in ascending or descending order, and **LIMIT** restricts the total number of rows returned. Additionally, **AS** allows you to rename columns or tables temporarily (aliasing), and **DISTINCT** ensures the query returns only unique or distinct values.
+
+
+CLAUSES TEST
+
+Q1.Show the name and price of all products.
+
+Q2 Show all products where the category is 'Electronics'.
+
+Q3. Group products by category. Show each category once.
+
+Q4. Show categories that have more than 1 product. *(Use after GROUP BY)*
+
+Q5. Show all products sorted by price in ascending order.
+
+Q6 Show only the first 3 products from the table.
+
+Q7 Show product name as "Item_Name" and price as "Item_Price".
+
+Q8. Show all the unique categories from the products
