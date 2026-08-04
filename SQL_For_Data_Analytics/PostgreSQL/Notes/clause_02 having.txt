@@ -1,0 +1,13 @@
+clause_02 having 
+
+select category, count(*) from products
+Group by category
+Having count(*) > 1;
+
+
+ex :
+Electronics: 2 items (Laptop, Mobile)
+
+Clothing: 2 items (Shirt, Jeans)
+
+Stationery: 1 item (Book)
