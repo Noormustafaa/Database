@@ -1,0 +1,28 @@
+clause_06 Distinct 
+
+Select Distinct category from products;
+
+The DISTINCT keyword in SQL is used to remove duplicate records from the result set and return only unique values.
+
+SELECT category FROM products;
+
+category
+-------------
+Electronics
+Clothing
+Electronics
+Clothing
+Electronics
+
+
+Explanation: It fetches the category for every single row, resulting in repeated values (Electronics appears 3 times, Clothing twice).
+
+With DISTINCT:
+
+
+SELECT DISTINCT category FROM products;
+
+category
+-------------
+Electronics
+Clothing
