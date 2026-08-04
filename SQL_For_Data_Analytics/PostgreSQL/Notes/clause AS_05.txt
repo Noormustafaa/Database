@@ -1,0 +1,18 @@
+clause AS_05
+
+In This we change The Name of table 
+
+SELECT name as Item_name, price as item_price From products; 
+
+The AS keyword in SQL is used for aliasing, which means giving a column or table a temporary name in the query results. It does not change the actual table structure or column names in the database—it only renames them in the output display to make the results more readable and user-friendly.
+
+Sample Table: products
+Suppose you have this original table in your database:
+
+Example: Using AS for Column Aliases
+When you execute the query:
+
+SELECT name AS Item_name, price AS item_price FROM products;
+
+
+Output Customization: Notice how the column headers changed from name  Item_name and price item_price
