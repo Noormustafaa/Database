@@ -1,0 +1,11 @@
+clause_03 sorted by 
+
+Select * from products order by price;
+
+ORDER BY price (ya ORDER BY price ASC):(10, 30, 500, 1000)
+ORDER BY price DESC: Mehenga  (1000, 500, 30, 10)
+
+
+we can also use with strings 
+
+Select * from products order by name;
