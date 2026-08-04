@@ -1,0 +1,18 @@
+clause_04 limit 
+
+Select * from products limit 3;
+
+
+The LIMIT clause in SQL is used to restrict the number of rows returned by a query, making it especially useful when dealing with large datasets or when retrieving top-level results. When applied as SELECT * FROM products LIMIT 3;, the query fetches only the first three rows from the products table, ignoring any remaining records regardless of the total table size. While a standalone LIMIT simply returns the initial rows based on the default data retrieval order, combining it with an ORDER BY clause creates powerful top-N queries. For instance, running SELECT * FROM products ORDER BY price DESC LIMIT 3; first sorts the entire table from highest to lowest price and then returns only the top three most expensive items, a pattern frequently used in real-world applications like e-commerce top-sellers lists or website pagination.
+
+Basic Example: Limiting Row Count
+Suppose you have a products table with many items. Using LIMIT 3 ensures the database returns only the first 3 records.
+
+SELECT * FROM products 
+LIMIT 3;
+
+
+SELECT name, price 
+FROM products 
+ORDER BY price DESC 
+LIMIT 3;
