@@ -1,0 +1,57 @@
+Windows Function : 
+
+In Sql for writing Complex query or Advance Query ,you must have the knowledge of windows Functions :
+
+Window Functions Applies aggregate, ranking and Analytic Functions over a particular window (set of rows ).
+
+a window function performs a calculation across a set of table rows that are somehow related to the current row.
+
+Unlike regular aggregate functions (like SUM() or AVG() with GROUP BY), window functions do not collapse rows into a single output row. Every row in your query result retains its individual identity while gaining access to aggregate calculations.
+
+Core Syntax
+A window function is identified by the OVER() clause:
+
+function_name([expression]) OVER (
+    [PARTITION BY partition_clause]
+    [ORDER BY order_clause]
+    [frame_clause]
+)
+
+PARTITION BY: Divides the rows into groups (partitions). The function runs independently on each partition.
+
+ORDER BY: Defines the order of rows within each partition for order-dependent functions (like ranking or running totals).
+
+frame_clause: Sets a subset frame within the partition (e.g., ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW).
+
+Common Use Cases & Examples
+1. Running Total (Cumulative Sum)
+To calculate a running sum of sales ordered by date:
+
+
+
+SELECT 
+    sale_date,
+    amount,
+    SUM(amount) OVER (ORDER BY sale_date) AS running_total
+FROM sales;
+
+
+
+Key Rules to Remember
+Execution Order: Window functions run after WHERE, GROUP BY, and HAVING clauses, but before ORDER BY and LIMIT.
+
+Filtering Restrictions: You cannot use window functions directly inside a WHERE or HAVING clause. If you need to filter by a window result (e.g., WHERE salary_rank <= 3), wrap the query in a Common Table Expression (CTE) or subquery:
+
+
+
+WITH RankedEmployees AS (
+    SELECT 
+        employee_name,
+        department_id,
+        salary,
+        DENSE_RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) as rank
+    FROM employees
+)
+SELECT * 
+FROM RankedEmployees 
+WHERE rank <= 3;
