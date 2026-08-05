@@ -55,3 +55,13 @@ WITH RankedEmployees AS (
 SELECT * 
 FROM RankedEmployees 
 WHERE rank <= 3;
+
+There are three types of Functions in windows functions
+
+Aggregate functions
+
+Ranking functions
+
+Analytic functions
+
+
