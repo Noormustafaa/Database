@@ -1,0 +1,74 @@
+Vector DataBase_01! 
+
+What Is Vector Database ?
+ 
+Def: A Vector Database is a database used for storing high-dimensional Vectors Such as word Embeddings Or Image embeddings :
+
+ex: we have Document | Image  | PDF 
+
+
+		|
+		|
+     [0.34][-0.24][0.99][-0.37]
+
+		|
+		|
+		Vector Database
+
+Simple : Vector Database = Smart Search Engine For Meaning .
+
+Imagine you have a Super-smart Librarian who understands what you mean. not just what You Say !
+
+
+How it works !
+
+1. Normal Databases(SQl/NoSQL):
+   Match Exact Words 
+
+	example: Search "Red Shoes" Only Results With "red Shoes " Will show !
+
+
+2. Vector Database: Understand The meaning Of Things .
+   Search the "red Shoes" --> Also Shows "crimson Sneakers", "maroon boots" , "Nike red Footwear" 
+   Why ? Because Red =crimson =maroon.
+
+
+--> Why do we need it ? ( If we have SQL/NoSQL)
+
+
+   AI needs " Undertanding "  : ChatGpt Uses Vectors To remember Context :
+
+   Sementic Search : Search " Clothes For Winter " --> Shows Sweaters , Jackets
+   Recommendations:  Spotify  Suggests " Similar" Songs 
+
+So : SQL For Account Numbers , transactions
+   : NoSQL = Flexible data Storage 
+   : Vector DB = AI - powered "Meaning" Search .
+
+Companies Like Google , Netflix , Spotify , use it for smart search and AI .
+
+
+
+Note :Note : Unstructured Data AI models First Convert it into the numbers , and that numbers list are known as 
+             Vectors:
+
+So Flow is : Unstructured Data : AI Converts to numbers --> Vector DB Stores those numbers 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
