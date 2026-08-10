@@ -1,0 +1,20 @@
+Vector Embeddings_02 :
+
+Whenever we are talkin About unstructured data , it is not only image data ! it can be video audio, Text data .
+
+Let's Example we have unstructured data image , or video .
+
+step1: we need to apply on Embeddings Model, and Embedding model is Nothing but It is the Neural Network Model , it's 
+       the Deep learning model , so first of all we need to generate some vectors. 
+
+embeddings models like  What to bake , Transformer based , Openai base , Or LLm 
+
+
+So Flow is :
+
+ Image (Object) ---> Embeddings Model --> Vector [0.2,0.9,1] 
+
+
+ or 
+
+Text ---> Embedding Model (gpt) vector embeddings [ ---- ] --->ADX For Storage + Similarity Search 
