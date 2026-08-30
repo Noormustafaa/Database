@@ -1,0 +1,29 @@
+Keys_In_DBMS
+
+In a DBMS, a key is a column (or set of columns) used to uniquely identify a row in a table or build connections between different tables—much like a social security number or passport ID uniquely identifies a person.
+
+Example Table: Students
+
+Student_ID  Email          SSN       Name  Department_ID  
+ 
+101       alex@mail.com    999-01    Alex    D1
+
+
+
+Types of Keys
+
+Primary Key (PK): The main column chosen to uniquely identify each row. It cannot contain duplicate values or NULL (empty) values.
+
+Example: Student_ID (101, 102).
+
+Candidate Key:
+
+Alternate Key:
+
+
+Super Key:
+
+Foreign Key (FK):
+
+
+Composite Key:
