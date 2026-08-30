@@ -1,0 +1,30 @@
+Primary_Key 
+
+A Primary Key is a column (or group of columns) in a table that uniquely identifies every single row. Think of it like a Student Roll Number or National ID—no two people can have the same number, and no one is allowed to leave it blank.
+
+
+Key Rules:
+
+Must be unique: No duplicate values allowed in that column.
+
+Cannot be empty (NULL): Every row must have a value.
+
+One per table: A table can only have one primary key constraint.
+
+
+SQL Command Examples
+1. Create a Primary Key when making a new table
+
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Email VARCHAR(100)
+);
+
+
+2. Add a Primary Key to an existing table
+
+
+ALTER TABLE Students
+ADD PRIMARY KEY (StudentID);
