@@ -1,0 +1,48 @@
+Candidate Key :
+
+A Candidate Key is any column (or combination of columns) that has the ability to uniquely identify every single row in a database table.
+
+
+Think of them as "candidates" competing in an election: every candidate key is fully qualified to become the Primary Key, but you ultimately pick only one to win the job.
+
+
+Real-World Example
+Imagine a Students table in a college database:
+
+
+Student_ID                    Email               Passport_Number              Name             Age
+
+101	                   rahul@mail.com	    A1234567	            Rahul Sharma	20
+
+
+In this table, three columns can individually identify a student without confusion:
+
+Student_ID — Unique for everyone.
+
+Email — No two students share the same email.
+
+Passport_Number — Unique to every individual.
+
+
+Therefore, this table has 3 Candidate Keys: {Student_ID}, {Email}, and {Passport_Number}.
+
+
+What Happens to the Candidate Keys?
+Once you identify all candidate keys, you split them into two roles:
+
+Primary Key: You pick one candidate key to be the main identifier (e.g., Student_ID).
+
+Alternate Keys: The remaining candidate keys that were not picked become Alternate Keys (e.g., Email and Passport_Number).
+
+
+
+
+
+Three Strict Rules for Candidate Keys
+Uniqueness: No two rows can have the exact same value in that column.
+
+Not Null: It cannot contain empty/missing (NULL) values.
+
+Minimal (No Extra Weight): It must contain only the minimum required columns.
+
+Example: {Student_ID} is a Candidate Key. While combining {Student_ID, Name} would also identify a row uniquely, the Name column is unnecessary clutter, so the pair {Student_ID, Name} is a Super Key, not a Candidate Key.
