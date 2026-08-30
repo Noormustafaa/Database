@@ -1,0 +1,43 @@
+An Alternate Key (also called a secondary candidate key) is any Candidate Key in a table that was not selected as the Primary Key. Even though it is fully capable of uniquely identifying every row, it serves as a backup identifier.
+
+Formula:
+Candidate Keys = Primary Key + Alternate Keys
+
+Example Scenario
+
+
+Candidate Keys: {User_ID}, {Email}, {Passport_No} (all three are qualified to be the main key).
+
+Selected Primary Key: {User_ID} (chosen by the database designer as the main identifier).
+
+Alternate Keys: {Email} and {Passport_No} (the remaining qualified keys).
+
+
+SQL Code Example
+
+
+CREATE TABLE Users (
+    User_ID INT PRIMARY KEY,            -- Selected Primary Key
+    Email VARCHAR(100) UNIQUE,         -- Alternate Key
+    Passport_No VARCHAR(20) UNIQUE,    -- Alternate Key
+    Full_Name VARCHAR(50)
+);
+
+
+
+
+
+1. Alternate Key (Jo Candidate Key Primary Key nahi ban saki)
+Candidate Keys mein humne dekha tha ke multiple columns Primary Key banne ke kabil hotay hain. Lekin select hum sirf ek ko karte hain.
+
+Jo Primary Key ban gayi: Primary Key
+
+Jo baaki bach gayi: Alternate Key
+
+
+
+Example:
+
+Candidate Keys: {Student_ID}, {Email}, {Passport_Number}
+
+Agar hum Student_ID ko Primary Key choose kar lein, toh Email aur Passport_Number hamari Alternate Keys ban jayengi.
