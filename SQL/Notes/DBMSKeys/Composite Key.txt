@@ -1,0 +1,195 @@
+Composite Key : 
+
+A Composite Key is a primary key that consists of two or more columns combined together to uniquely identify each row in a table. It is used when no single column in a table can guarantee unique values on its own.
+
+
+Why Do We Need It?
+
+In relational databases, especially when dealing with many-to-many relationships (like students enrolling in multiple courses, or orders containing multiple items), individual columns often contain duplicate values:
+
+Single columns repeat data (e.g., one student takes 5 courses, so their ID appears 5 times).
+
+Adding a separate artificial ID column (like AutoID) is sometimes unnecessary or doesn't prevent duplicate entries.
+
+A composite key enforces business logic—ensuring the exact same combination of records cannot be inserted twice (e.g., preventing a student from enrolling in the exact same class twice).
+
+ex:
+
+Imagine a university's Course_Enrollment table tracking which student is in which course:
+
+Student_ID             Course_ID        Semester
+101	                 CS101	       Fall 2026
+
+101	                MATH200	       Fall 2026
+
+102	                CS101	       Fall 2026
+
+
+Why Student_ID alone fails: Student 101 appears multiple times because they take multiple courses.
+
+Why Course_ID alone fails: Course CS101 appears multiple times because multiple students take it.
+
+The Composite Key solution: Combining (Student_ID, Course_ID) creates a unique pair:
+
+
+
+(101, CS101) — Unique
+
+(101, MATH200) — Unique
+
+(102, CS101) — Unique
+
+If you try to insert (101, CS101) a second time, the database will block it because that composite key already exists.
+
+
+SQL Code Example
+
+SQL
+
+
+CREATE TABLE Course_Enrollment (
+    Student_ID INT,
+    Course_ID INT,
+    Semester VARCHAR(20),
+    -- Combining two columns to form one Composite Primary Key
+    PRIMARY KEY (Student_ID, Course_ID)
+);
+
+----------The Question:
+
+"If values are repeating in both columns, how can it be a Primary Key? You said a Composite Key IS a Primary Key!
+
+
+The Explanation:
+
+That is a completely fair question—almost everyone gets confused by this at first!
+
+The fundamental rule of a Primary Key is: Every row in a table must be uniquely identifiable.
+
+Single-Column Primary Key: A single, individual column holds unique values (e.g., Student_ID: 101, 102, 103).
+
+
+
+
+
+Composite Primary Key: The combination (pair) of multiple columns holds unique values, even if individual columns repeat values.
+
+
+How the Database Views It
+If you look at each column separately, yes, values repeat:
+
+Student_ID: 101, 101 (Repeated)
+
+Course_ID: CS101, CS101 (Repeated)
+
+
+If you try to insert (101, CS101) a second time, the database will throw an error because that specific combination already exists
+
+
+A Real-Life Analogy
+Think of two people in a workplace:
+
+John Smith
+
+John Doe
+
+
+
+
+
+
+Here:
+
+The first name "John" repeats.
+
+The system evaluates First Name + Last Name as a composite pair.
+
+"John + Smith" and "John + Doe" are two completely unique identities.
+
+
+
+
+
+
+Individual columns can repeat as much as they need to; it is the combined pair that forms the Primary Key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------
+
+
+phr to in dono columns mai repetaion ho rahi hai primary key to nh hua ? tum k rahi ho composite key ek primary key he hoti hai !
+
+
+Tumhara sawal bilkul valid hai! Pehli nazar mein har kisi ko yahi lagta hai ke "jab 101 aur CS101 repeat ho rahe hain, toh yeh Primary Key kaise hui?"
+
+Sari game yahan "Jodi" (Combination) ki hai, akele column ki nahi.
+
+
+Primary Key ka asal rule yeh hota hai ke: "Table ki har row uniquely pehchani jaani chahiye."
+
+Single Primary Key: Isme ek akela column unique hota hai (jaise Roll Number: 101, 102, 103).
+
+Composite Primary Key: Isme dono columns ko mila kar jo jodi (pair) banti hai, woh unique hoti hai.
+
+
+
+Isko Is Tarah Samjho:
+Agar tum akele akele columns ko dekhoge:
+
+Student_ID: 101, 101 (Haan, repeat ho raha hai!)
+
+Course_ID: CS101, CS101 (Haan, yeh bhi repeat ho raha hai!)
+
+Lekin Database individual columns ko nahi, balki pari jodi (Pair) ko check karta hai:
+
+
+Agar tum dobara (101, CS101) daalne ki koshish karoge, tab Database error dega kyun ke yeh jodi pehle se majood hai.
+
+
+Real-Life Analogy
+Socho ek class mein do bacche hain:
+
+Ek ka naam hai: Rahul Sharma
+
+Doosre ka naam hai: Rahul Verma
+
+yahan:
+
+"Rahul" repeat ho raha hai.
+
+Lekin "Rahul + Sharma" aur "Rahul + Verma" ki puri jodi unique hai.
+
+Bas yahi kaam Composite Key karti hai! Column akele mein repeat ho sakte hain, lekin unka combination duplicate nahi ho sakta. Clear hua?
+
+
+
+
