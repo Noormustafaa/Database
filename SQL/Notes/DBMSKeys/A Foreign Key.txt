@@ -1,0 +1,114 @@
+A Foreign Key :
+is a column (or a set of columns) in one table that references and links to the Primary Key of another table. It establishes a relational bond between tables and enforces Referential Integrity.
+
+
+Key Characteristics
+Parent-Child Relationship: The table containing the Primary Key is the Parent Table (referenced table). The table containing the Foreign Key is the Child Table (referencing table).
+
+Referential Integrity: Ensures that data inserted into the child table must already exist in the parent table.
+
+Allows Duplicates & Nulls: Unlike a Primary Key, a Foreign Key can contain repeated values (multiple students can belong to the same department) and can also store NULL values (if a student hasn't been assigned a department yet).
+
+Table Representation
+
+Parent Table: Departments
+
+
+Dept_ID(PK)         Dept_Name
+
+
+D1	           Computer Science
+
+D2	           Business Administration
+
+
+
+Child Table: Students
+
+
+
+Student_ID(PK)	                 Name	           Dept_ID (FK)
+
+101	                         Rahul	              D1
+
+102	                         Sara	              D1
+
+
+
+SQL Code Example
+
+
+-- Parent Table
+CREATE TABLE Departments (
+    Dept_ID VARCHAR(10) PRIMARY KEY,
+    Dept_Name VARCHAR(50)
+);
+
+-- Child Table
+CREATE TABLE Students (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Dept_ID VARCHAR(10),
+    -- Defining the Foreign Key relationship
+    FOREIGN KEY (Dept_ID) REFERENCES Departments(Dept_ID)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Foreign Key Kya Hoti Hai? 
+Foreign Key bas ek aisa column hota hai jo do different tables ko aapas mein jodta (link karta) hai.
+
+Iska sabse simple rule yeh hai:
+
+Jab Table A ki Primary Key ko utha kar Table B mein daala jaye, toh Table B mein wahi column Foreign Key ban jata hai.
+
+
+Real-Life Example:
+Maan lo tumhare paas 2 tables hain:
+
+1. Departments Table (Parent Table)
+
+Dept_ID (Primary Key): D1, D2
+
+2. Students Table (Child Table)
+
+Student_ID (Primary Key): 101, 102
+
+Name: Rahul, Sara
+
+Dept_ID (Foreign Key): D1, D2
+
+
+Yahan Students table ka Dept_ID column ek Foreign Key hai kyun ke yeh seedha Departments table ki Primary Key se connect hai.
+
+
+Iski Zaroorat Kyun Hai?
+Yeh galat ya bogus data ko rokta hai. Agar Departments table mein D99 naam ka koi department exist hi nahi karta, toh Database aapko Students table mein kisi student ko D99 assign karne hi nahi dega! Is constraint ko Referential Integrity kehte 
