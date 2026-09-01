@@ -1,0 +1,26 @@
+A vector database indexes and store vector embeddings for faster retrieval and similarity search.
+
+Use Case Of VectorDatabases: 
+
+Use cases of Vector DB
+
+Long-Term memory for LLMs
+
+Semantic Search: Search based on the meaning of context
+
+Similarity Search: Text, Images, Videos, Audios
+
+Recommendation engine as well
+
+
+Some widely used Vector DB
+
+Chroma
+
+Weaviate -- Cloud based Database
+
+FAISS (Scalable Search With Facebook AI)
+
+Pinecone--Cloud based Database
+
+redis
