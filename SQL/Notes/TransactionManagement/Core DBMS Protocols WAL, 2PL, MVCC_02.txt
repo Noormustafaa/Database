@@ -1,0 +1,20 @@
+Core DBMS Protocols: WAL, 2PL, and MVCC
+
+How DBMS Enforces ACID Properties Under the Hood
+
+1. Write-Ahead Logging (WAL) for Atomicity & Durability
+Before any data page is modified on disk, the DBMS writes the operation to an append-only transaction log on stable storage.
+
+REDO Log: Used during crash recovery to re-apply changes from committed transactions that hadn't hit the main disk yet.
+
+UNDO Log: Used to reverse changes made by active transactions that failed mid-way.
+
+2. Two-Phase Locking (2PL) for Isolation
+To enforce isolation, transactions must acquire locks before modifying data:
+
+Growing Phase: Transaction acquires locks (Shared for read, Exclusive for write) but cannot release any.
+
+Shrinking Phase: Transaction releases locks but cannot acquire new ones.
+
+3. Multi-Version Concurrency Control (MVCC)
+Modern databases (like PostgreSQL and InnoDB) use MVCC instead of pure locking. Readers don't block writers, and writers don't block readers. The database creates a temporal snapshot version of a row whenever it is updated, allowing queries to read historical states without taking locks.
