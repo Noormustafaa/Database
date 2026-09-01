@@ -1,0 +1,33 @@
+ACID_Properties:
+ACID is an acronym representing four core properties—Atomicity, Consistency, Isolation, and Durability—that guarantee database transactions execute reliably, preserving data integrity even under hardware failure or heavy concurrent usage.
+
+1. Atomicity ("All or Nothing")
+
+Concept: Treats a transaction as a single, indivisible logical unit of work. Every statement within the transaction must complete successfully; if any single operation fails, the entire transaction is aborted and rolled back to its original state.
+
+DBMS Enforcement: Managed using Undo Logs. The DBMS records every change in a temporary log. If a failure occurs midway, it uses this log to reverse all partial modifications.
+
+
+Example: In a transfer of $100 from Account A to Account B, if the debit from A succeeds but the credit to B fails, Atomicity forces the system to undo the debit from A.
+
+
+2. Consistency ("State Validity")
+
+Concept: Guarantees that a transaction moves the database from one valid state to another, strictly adhering to all defined schema rules, constraints (e.g., primary keys, foreign keys), and domain invariants.
+
+DBMS Enforcement: Checked by database validation engines enforcing primary/foreign key relationships, CHECK constraints, and data-type validation before committing.
+
+Example: If a database constraint dictates account_balance >= 0, a transaction attempting to withdraw more money than available fails validation and is aborted.
+
+
+3. Isolation ("Concurrent Execution")Concept: Ensures that concurrently executing transactions do not interfere with each other. The intermediate state of an active transaction is kept invisible to other transactions until it is committed.DBMS Enforcement: Implemented through locking mechanisms (such as Two-Phase Locking) or Multi-Version Concurrency Control (MVCC).Example: If $T_1$ updates a product price from $10 to $15, $T_2$ reading that product price simultaneously will not see $15 until $T_1$ formally commits.
+
+
+
+4. Durability ("Permanent Persistence")
+
+Concept: Guarantees that once a transaction executes a COMMIT, its updates are permanently saved in non-volatile storage and will survive any subsequent system crash or power loss.
+
+DBMS Enforcement: Managed using Write-Ahead Logging (WAL) and Redo Logs. Changes are committed to a persistent transaction log file on disk before updating the primary database files.
+
+Example: Once an ATM displays "Transaction Successful," a sudden power outage at the bank's data center will not cause the system to forget the updated account balance.
