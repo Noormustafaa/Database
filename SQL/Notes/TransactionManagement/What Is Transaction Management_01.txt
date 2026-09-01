@@ -1,0 +1,18 @@
+What Is Transaction Management :
+
+Transaction management in a DBMS is the process of managing a group of related database operations—known as a transaction—so they execute as a single, logical unit of work. Its defining principle is "all-or-nothing": either every operation in the sequence completes successfully, or the entire sequence is completely undone.
+
+
+Why We Use Transaction Management
+
+Data Integrity During Failures: If a system crashes, loses power, or encounters an error midway through a multi-step operation (like transferring money between accounts), transaction management automatically rolls back the partial changes so data is never left incomplete or corrupted.
+
+
+Safe Concurrent Access: In high-traffic systems, thousands of users may attempt to read and write to the database simultaneously. Transaction management isolates these concurrent operations so they do not interfere with one another or cause issues like two users purchasing the same item at the exact same millisecond.
+
+Reliable Crash Recovery: Once a transaction is successfully finalized (COMMIT), its updates are permanently written to storage. Even if the database server immediately crashes afterward, the committed data is preserved.
+
+Enforcing Database Rules: It ensures that every transaction transitions the database from one valid state to another, upholding all schema constraints, foreign key relationships, and business rules before and after execution.
+
+
+Without transaction management, modern multi-user databases would constantly suffer from corrupted records, phantom updates, and data loss during unexpected system crashes. 
