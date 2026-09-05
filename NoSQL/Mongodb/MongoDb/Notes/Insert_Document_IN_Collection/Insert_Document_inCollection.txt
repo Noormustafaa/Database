@@ -1,0 +1,55 @@
+Insert_Document_inCollection 
+
+Step1: insertOne({})
+
+school> db.students.insertOne({name:"Noor",age:15})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a9c3c5cc2d5f2266beec4a9')
+
+}
+
+
+step2:  
+ 
+# to see the Data 
+
+school> db.students.find()
+[
+  { _id: ObjectId('6a9c3c5cc2d5f2266beec4a9'), name: 'Noor', age: 15 }
+]
+school>
+
+
+step3: InsertMany()
+
+school> db.students.insertMany([   {name:"Noor1",Age:32},{Name:"Ali",Age:44},])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a9c3dabc2d5f2266beec4aa'),
+    '1': ObjectId('6a9c3dabc2d5f2266beec4ab')
+  }
+}
+school>
+
+
+
+
+step4:
+
+school> db.students.insertOne({name:"Shahid Kapoor",age:23,class:200})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a9c3eb8c2d5f2266beec4ac')
+}
+school>
+
+In  this command class has numeric value and still it accept and does not show any error so ! to resist this we use the JSON's Validations and we will learn this later !
+
+
+
+
+
+
+
