@@ -1,0 +1,140 @@
+Practical : 
+
+step1: open cmd and write mongosh 
+
+step2: Control+L For Clear screen
+
+step3: show dbs              # using this command we will be able to show how many databases are already created 
+
+output--
+
+test> show dbs
+Latest_db  64.00 KiB
+admin      40.00 KiB
+config     72.00 KiB
+local      84.00 KiB
+
+
+step4: use School1     # this command will create database name School1 and switch to that database 
+
+--output
+
+test> show dbs
+Latest_db  64.00 KiB
+admin      40.00 KiB
+config     72.00 KiB
+local      84.00 KiB
+test> use School1
+switched to db School1
+School1>                   # that means now we are in School1 database 
+
+
+Step5: db              # this command is used for to show in which database currently we are 
+
+--output
+
+School1> db
+School1
+School1>
+
+
+Step6: Show dbs           # if we will write again this command then we will get this 
+
+--output
+
+School1> show dbs
+Latest_db  64.00 KiB
+admin      40.00 KiB
+config     96.00 KiB
+local      84.00 KiB        # that means still it is not showing that School database is created because we have not added it into even a single document
+School1>   
+
+
+Step7: db.createCollection("Students")         # camelCase
+
+--Output
+
+School1> db.createCollection("Students")
+{ ok: 1 }
+School1>
+
+
+step8: show collections    -- to see how many collections are exist in the schools database 
+
+--Output : 
+
+School1> show collections
+Students
+School1>
+
+
+
+Step9 :  
+School1> db.Students.renameCollection("Student")
+{ ok: 1 }
+School1>
+
+
+--step10
+
+db.help()        # it will show all commands which is being used with the db 
+
+
+step 10 : db.Student.help() 
+
+
+In this particular statement, Student is the name of the collection (similar to a table in relational databases), and .help() is a built-in shell function.
+
+
+
+step 11:
+
+
+db.Student.drop()  # used for the drop the Collection 
+
+--Output 
+
+School1> db.Student.drop()
+true
+School1>
+
+
+step12: 
+
+db.dropDatabase()   # it will dlete the database 
+
+
+--output
+
+School1>  db.dropDatabase()
+{ ok: 1, dropped: 'School1' }
+School1>
+
+Step13:
+
+use admin    # to go another database 
+
+
+
+
+
+
+                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
