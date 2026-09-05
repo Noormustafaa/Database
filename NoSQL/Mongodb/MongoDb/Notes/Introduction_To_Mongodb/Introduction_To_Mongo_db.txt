@@ -1,0 +1,105 @@
+Introduction_To_Mongo_db
+
+MongoDB is a NoSQL, document-oriented database designed to store large amounts of data without the rigid structure of traditional databases. Instead of tables with fixed rows and columns, MongoDB stores data as flexible, JSON-like documents.
+
+How MongoDB Works: An Example
+
+In a traditional relational database (RDBMS), storing a user with multiple phone numbers requires two separate tables joined by a key. In MongoDB, everything sits together in one readable document:
+
+
+JSON
+{
+  "_id": "user_101",
+  "name": "Alex",
+  "email": "alex@example.com",
+  "phoneNumbers": ["555-0192", "555-0199"],
+  "address": {
+    "city": "Seattle",
+    "zip": "98101"
+  }
+}
+
+JSON (JavaScript Object Notation) is a human-readable text format for sharing data, while BSON (Binary JSON) is a machine-optimized binary representation of that same data used internally by MongoDB for fast storage and querying.
+
+What is JSON?
+
+JSON is plain text organized into simple key-value pairs. It is the universal language of the web—when your mobile app fetches your profile info from a server, that data almost always travels as a JSON text string.
+
+
+{
+  "name": "Sarah",
+  "age": 28,
+  "isStudent": false
+}
+
+
+Human-Readable: Anyone can open a .json file in Notepad and immediately understand it.
+
+Universal: Every modern programming language has built-in tools to read and write JSON text.
+
+Limitations: JSON only supports basic data types—Strings, Numbers, Booleans, Arrays, Objects, and null. It does not natively support dates, high-precision numbers, or raw binary files.
+
+
+What is BSON?
+
+BSON stands for Binary JSON. Instead of plain text, BSON converts key-value pairs into a stream of 0s and 1s (bytes). While humans can't read BSON without a decoder, databases can process it significantly faster.
+
+
+MongoDB primarily stores semi-structured data, though it is flexible enough to handle structured data when you need it.
+
+To understand why, here is how the three data types differ:
+
+Structured Data: Fixed rows and columns where every single entry must follow the exact same rules (e.g., Excel spreadsheets or SQL tables).
+
+
+Semi-Structured Data: Data that has internal organization (keys, tags, and nested values), but does not force every record to look identical. This is where JSON/BSON and MongoDB live.
+
+Unstructured Data: Raw files that have no search-friendly internal markers or schema (e.g., raw MP3s, videos, PDFs, or photos).
+
+json format like java script object notation mtlb haamara data key value pair mai hota hai to kiya hum us ko kehty hai ?
+
+Key-value pairs wale structure ko JSON ke andar JSON Object kaha jata hai. Alag-alag contexts aur programming languages mai is pattern ko yeh naam diye jaate hain:
+
+JSON mai: JSON Object (Yeh hamesha {} curly brackets ke andar hota hai).
+
+MongoDB / Databases mai: Document (Isi waja se MongoDB ko Document-oriented Database kehte hain).
+
+General Computer Science mai: Key-Value Data Structure ya Associative Array.
+
+Programming Languages mai:
+
+JavaScript: Object
+
+Python: Dictionary (dict)
+
+Java / C++: HashMap / Map
+
+PHP: Associative Array
+
+Example:
+
+
+JSON
+{
+  "name": "Ali",    // "name" -> Key,  "Ali" -> Value
+  "age": 25        // "age"  -> Key,  25    -> Value
+}
+
+Is poore {} block ko ek JSON Object ya Document kaha jata hai, aur is ke andar har element ko Key-Value Pair kehate hain.
+
+
+
+
+
+
+
+
+Why Do We Need MongoDB?
+
+Speed of Development: Data naturally maps to modern programming languages (like JavaScript, Python, or Java) without complex mapping layers.
+
+Flexibility for Changing Data: You can add a new field (like twitterHandle) to a new record without altering or locking the entire database schema.
+
+Built for Scale (Sharding): Spreading massive data across multiple servers is natively built into MongoDB, making high-traffic scaling straightforward.
+
+High Performance for Unstructured Data: Fast read/write performance when dealing with nested data structures and real-time streams.
