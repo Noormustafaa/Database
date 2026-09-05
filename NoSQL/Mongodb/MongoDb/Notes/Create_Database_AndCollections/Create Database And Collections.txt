@@ -1,0 +1,37 @@
+Create Database And Collection:
+
+
+A Collection in MongoDB is a container or group that holds related documents. It is the MongoDB equivalent of a Table in a traditional relational database (RDBMS).
+
+If a database is a full filing cabinet, a Collection is a single drawer inside that cabinet, and the Documents are the individual files placed in that drawer.
+
+
+
+MongoDB vs. RDBMS Mapping:
+
+
+RDBMS Concept                     MongoDB Concept
+
+Database	                   Database
+
+Table	                           Collection
+
+
+Row / Record	                   Document (BSON)
+
+Column	                           Field
+
+
+--Create DataBase : 
+
+Use School 
+
+Function: use command create new Database  and We can use Existing Database .
+
+
+
+--How To create Collections : 
+
+db.createCollection("Collection_name")    Note : While Assigining name you can not give space 
+
+
