@@ -1,0 +1,27 @@
+Mongodb_DataTypes:
+
+
+Step1: Date Of Birth : 
+
+{dob: ISODATE("2024-10-18T18:30:00Z")}
+
+Here ISODATE is the Method and T Define Time and Z means end here and z Means UTC (Coordinated Universal Time)
+
+Step2: Another Method To Save the Date and Time in Mongodb 
+
+{dob:new Date ("2024-10-18T18:30:00Z")}
+
+Step3: For Saving The Current Date and Time Just Write blank method 
+
+{dob: new Date()}
+
+it will save the Current date and Time 
+
+
+step4: In Mongo-db There are two types of Integers 
+
+1-- 32 bit Integer 
+
+2-- 64 bit Integer 
+
+Just it has diffenrence of range , size 
